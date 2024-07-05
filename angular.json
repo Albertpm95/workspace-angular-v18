@@ -33,6 +33,15 @@
               "zone.js/testing"
             ]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/libreria-angular-v18/**/*.ts",
+              "projects/libreria-angular-v18/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -128,6 +137,15 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/cv-generator/**/*.ts",
+              "projects/cv-generator/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -222,6 +240,15 @@
               "projects/template-tienda-ngrx/src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/template-tienda-ngrx/**/*.ts",
+              "projects/template-tienda-ngrx/**/*.html"
+            ]
           }
         }
       }
