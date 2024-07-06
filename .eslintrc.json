@@ -1,47 +1,81 @@
 {
-  "root": true,
   "ignorePatterns": [
     "projects/**/*"
   ],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@ngrx/all"
+      ],
+      "files": [
+        "*.ts"
       ],
       "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
-          }
-        ],
         "@angular-eslint/component-selector": [
           "error",
           {
-            "type": "element",
             "prefix": "app",
-            "style": "kebab-case"
+            "style": "kebab-case",
+            "type": "element"
           }
-        ]
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "app",
+            "style": "camelCase",
+            "type": "attribute"
+          }
+        ],
+        "@ngrx/avoid-combining-component-store-selectors": "error",
+        "@ngrx/avoid-combining-selectors": "error",
+        "@ngrx/avoid-cyclic-effects": "error",
+        "@ngrx/avoid-dispatching-multiple-actions-sequentially": "error",
+        "@ngrx/avoid-duplicate-actions-in-reducer": "error",
+        "@ngrx/avoid-mapping-component-store-selectors": "error",
+        "@ngrx/avoid-mapping-selectors": "error",
+        "@ngrx/good-action-hygiene": "error",
+        "@ngrx/no-dispatch-in-effects": "error",
+        "@ngrx/no-effects-in-providers": "error",
+        "@ngrx/no-multiple-actions-in-effects": "error",
+        "@ngrx/no-multiple-global-stores": "error",
+        "@ngrx/no-reducer-in-key-names": "error",
+        "@ngrx/no-store-subscription": "error",
+        "@ngrx/no-typed-global-store": "error",
+        "@ngrx/on-function-explicit-return-type": "error",
+        "@ngrx/prefer-action-creator": "error",
+        "@ngrx/prefer-action-creator-in-dispatch": "error",
+        "@ngrx/prefer-action-creator-in-of-type": "error",
+        "@ngrx/prefer-concat-latest-from": "error",
+        "@ngrx/prefer-effect-callback-in-block-statement": "error",
+        "@ngrx/prefer-inline-action-props": "error",
+        "@ngrx/prefer-one-generic-in-create-for-feature-selector": "error",
+        "@ngrx/prefer-selector-in-select": "error",
+        "@ngrx/prefix-selectors-with-select": "error",
+        "@ngrx/select-style": "error",
+        "@ngrx/signal-state-no-arrays-at-root-level": "error",
+        "@ngrx/updater-explicit-return-type": "error",
+        "@ngrx/use-consistent-global-store-name": "error",
+        "@ngrx/use-effects-lifecycle-interface": "error",
+        "@ngrx/with-state-no-arrays-at-root-level": "error"
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
       "extends": [
         "plugin:@angular-eslint/template/recommended",
         "plugin:@angular-eslint/template/accessibility"
       ],
-      "rules": {}
+      "files": [
+        "*.html"
+      ],
+      "rules": {
+        "@ngrx/with-state-no-arrays-at-root-level": "warn"
+      }
     }
-  ]
+  ],
+  "root": true
 }
