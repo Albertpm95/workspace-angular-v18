@@ -14,10 +14,7 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
+    "lib": ["ES2022", "dom"],
     "module": "ES2022",
     "moduleResolution": "bundler",
     "noFallthroughCasesInSwitch": true,
@@ -26,9 +23,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "outDir": "./dist/out-tsc",
     "paths": {
-      "libreria-angular-v18": [
-        "./dist/libreria-angular-v18"
-      ]
+      "libreria-angular-v18": ["./dist/libreria-angular-v18"]
     },
     "skipLibCheck": true,
     "sourceMap": true,
